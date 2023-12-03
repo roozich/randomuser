@@ -32,7 +32,7 @@ const UserProfile: React.FC<UserProfProps> = ({
           >
             <Image src={currInfo.picture} rounded />
           </div>
-          <div className="p-1">
+          <div className={`p-1 ${isChanged("firstName") ? "highlight" : null}`}>
             <span>First name: {currInfo.firstName}</span>
           </div>
           <div className={`p-1 ${isChanged("lastName") ? "highlight" : null}`}>

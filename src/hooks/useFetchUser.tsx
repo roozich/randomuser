@@ -31,7 +31,7 @@ const useFetchUser = () => {
       const data = await response.json();
 
       const user = data.results[0];
-
+      // loading process ended - loaded
       setState((prevState) => ({
         ...prevState,
         userData: {
@@ -43,7 +43,7 @@ const useFetchUser = () => {
         isLoading: false,
       }));
     } catch (err) {
-      // loading process ended - loaded
+      // An error occurred during fetch - Throw an error
       setState((prevState) => ({
         ...prevState,
         isLoading: false,
